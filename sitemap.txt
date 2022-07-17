@@ -1,2 +1,2 @@
-http://example.com/2022/07/18/hello-world/
-http://example.com/
+http://yoursite.com/hello-world/
+http://yoursite.com/
