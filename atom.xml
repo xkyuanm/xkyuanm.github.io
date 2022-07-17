@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>笔记小木屋</title>
   
-  <subtitle>subtitle</subtitle>
+  <subtitle>欢迎来到星析的笔记小木屋，这里会记录在我学习过程中的笔记，您可以阅读我的笔记并提出您独特的见解这样我们可以互相学习交流，共同进步哒！</subtitle>
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
@@ -10,7 +10,7 @@
   <id>http://yoursite.com/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>星析</name>
     
   </author>
   
