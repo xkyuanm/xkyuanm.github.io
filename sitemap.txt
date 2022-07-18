@@ -1,2 +1,4 @@
+http://yoursite.com/shoka%E4%B8%BB%E9%A2%98%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/
 http://yoursite.com/hello-world/
 http://yoursite.com/
+http://yoursite.com/tags/%E4%B8%BB%E9%A2%98/
