@@ -4,7 +4,7 @@
   <url>
     <loc>http://yoursite.com/2022%E5%9B%BD%E8%B5%9BA%E6%A8%A1%E8%A7%A3%E6%9E%90/</loc>
     
-    <lastmod>2022-07-21</lastmod>
+    <lastmod>2022-07-23</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -31,7 +31,7 @@
 
   <url>
     <loc>http://yoursite.com/</loc>
-    <lastmod>2022-07-22</lastmod>
+    <lastmod>2022-07-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -39,7 +39,7 @@
   
   <url>
     <loc>http://yoursite.com/tags/%E4%B8%BB%E9%A2%98/</loc>
-    <lastmod>2022-07-22</lastmod>
+    <lastmod>2022-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
