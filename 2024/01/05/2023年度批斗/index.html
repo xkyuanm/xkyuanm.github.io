@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>2023年度批斗 | Hexo</title>
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>HEXO</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;HEXO</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>2023年度批斗</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/1/5
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>preface：（因为某些原因晚发了一天）</p>
+<p>​        今天也是来到了2023的最后一天，本来是没有想法写自己对于今年的一个总结，但是看见了我认识，但他不认识我的大佬的年度总结，觉得既然自己想要从事这个行业，还是应该给自己的总结，也是给明年的一年立下需要做的事情的flag，需要提前立，可能不太好，哈哈哈。</p>
+<p>正文：</p>
+<p>​	好，现在开始正式讲述今年小贤子一年来的艰苦历程，鼓掌鼓掌。</p>
+<p>​	回顾今年从开始到结尾，也是一段努力-怠惰-半努力-迷茫不定-努力的一段反复心理斗争的故事。从国赛没有去成回到正常班级上课后，也是刚开始进入了努力的状态，感觉确实那段时间是有学习的激情（除了数学），在后续单招失利后，就变成了怠惰的状态，已经不想学什么东西了，一年也是像这样反反复复的一直在心里中争斗，不过还是那句话呀，我并不是因为说我要通过这一年的集训队学习而一定要获得什么成就，获得什么免试的资格这些，而是说我通过了这一次经历我知道了我以后想从事哪一方面的工作，以及知道了自己以后要学习什么，我心里清楚自己知道了这些，所以并不感觉如果不去，我会不会现在在更好的地方，当然这也是别人问我时，我确实这样回复了的，不过也是顺利的有了学上，我当然还是感觉去的学校还是好的，哈哈哈，这就是在我再次进入半努力的状态前，我自己对自己是如何在进入集训队的时间中，找到自己的目标和学习规划的总结。</p>
+<p>​	其次在今年当中，还是要感谢我的学长，在前期当中，一直在告诉我该怎么走，以及很多的建议，还有忽悠我的羁绊，当然还有杰哥的课程，虽然现在很水不讲课了，等等。突然感觉在写这些之前，并没有什么感触，但是当写的时候发现还是有很多人在我的身上付出了很多的时间，不管是带我玩也好，跟我学习的也好，其实自己有些时候并不是一个人，当然，在今天跨年的时候如果我有对象就好了。</p>
+<p>​	之后是今年所完成的事情，估摸着也就是证书吧，也是在今年下半年正式踏入信息安全的领域了，开始考证书，学东西。现在学习也不像之前一样了，我完成就行了，现在知道去往前追一点点，去摸一下原理，再去实操，做事也不急了，知道慢慢来了，这我感觉也是得益于掌控者那边的老师吧，看见他们有一次发朋友圈是说 ” 拉长学习周期 “ 这么一句话，突然就感觉，自己在接触信息安全到现在，基本上都是急于求成，完成了就丢，看了视频就以为会，导致始终在原地踏步，哪怕别人问我的时候依然可以说出来，但是在下定决心打基础时实操却做不出来，这就像是我知道这个东西叫做香蕉，但是我不知道他是什么味道，因为我没有主动尝试过，也没有被动尝试过，但是经过了今年自己很多心性的改变，相信在2024年，自己在学习当中，一定会比今年更好。</p>
+<p>​	接下来就是明年要做的事情了，也就是最关键的flag，鼓掌鼓掌。</p>
+<p>​	还是1月14号的nisp二级把证书拿到手，今年也已经把信息安全工程师考完了，接下来是信息安全管理，以及有经济条件和实力之后去考oscp，把证书方面先拿到。因为我自己也感觉天赋不是那么好，信息安全其实也就刚学一年，还不是很精，所以2024的目标就是把web方向的东西，根据自己爬的别人的思维导图先学完，掌握，然后查漏补缺，在制定下一步的计划。同时在学习中冲刺专升本，提高一下自己的学历，毕竟不考不损失，万一上了就赚大了（认真脸）。</p>
+<p>​	这么多也就是我这平平淡淡的一年，对于别人来说没有惊艳，对于大佬来说如图喝水一般，但是对于我自己来说又是很难形容的一年，但是过了今年，确实的想要改变一下。曾经我花掉了太多的运气，而现在我感觉自己已经没有运气可用了，如果再不提高自己的话，确实不知道当第三年我要去实习的时候，除了力气，还有什么是我可以拿出来的东西。</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2024 Hexo
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;John Doe
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>
