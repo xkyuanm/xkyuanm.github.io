@@ -38,7 +38,9 @@
 
 <script src="/js/lib/home.js"></script>
 
+<script src="https://cdn.staticfile.org/animejs/3.2.1/anime.min.js"></script>
 <link rel="stylesheet" href="/css/main.css" />
+<link rel="preconnect" href="https://static-argvchs.netlify.app" />
 
 <meta name="generator" content="Hexo 7.0.0"></head>
 <body>
@@ -381,6 +383,13 @@
         
     </div>
     <script src="/js/main.js"></script>
+    <script>
+        console.info("Welcome to Argvchs' blog!");
+        if (!window.hasOwnProperty("ontouchstart")) {
+            let html = '<canvas id="fireworks" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 32767"></canvas><script src="https://static-argvchs.netlify.app/js/fireworks.min.js"><\/script>';
+            document.body.append(document.createRange().createContextualFragment(html));
+        }
+    </script>
     
 </body>
 </html>
