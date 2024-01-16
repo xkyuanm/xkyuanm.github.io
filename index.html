@@ -1,939 +1,450 @@
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="Hexo Theme Redefine">
-    
-    <meta name="author" content="莉蓓">
-    <!-- preconnect -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="utf-8" />
+    <title>莉蓓的幻想世界</title>
+    <meta name="author" content="莉蓓" />
+    <meta name="description" content="你好，莉蓓" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
 
-    
-    <!--- Seo Part-->
-    
-    <link rel="canonical" href="http://example.com/"/>
-    <meta name="robots" content="index,follow">
-    <meta name="googlebot" content="index,follow">
-    <meta name="revisit-after" content="1 days">
-    
-        <meta name="description" content="你好，莉蓓">
-<meta property="og:type" content="website">
-<meta property="og:title" content="莉蓓的幻想世界">
-<meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="莉蓓的幻想世界">
-<meta property="og:description" content="你好，莉蓓">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="莉蓓">
-<meta name="twitter:card" content="summary">
-    
-    
-    <!--- Icon Part-->
-    <link rel="icon" type="image/png" href="/images/redefine-favicon.svg" sizes="192x192">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-favicon.svg">
-    <meta name="theme-color" content="#A31F34">
-    <link rel="shortcut icon" href="/images/redefine-favicon.svg">
-    <!--- Page Info-->
-    
-    <title>
-        
-        莉蓓的幻想世界
-    </title>
-
-    
-<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
 
-    
-        <style>
-    :root {
-        --preloader-background-color: #fff;
-        --preloader-text-color: #000;
-    }
-
-    @media (prefers-color-scheme: dark) {
-        :root {
-            --preloader-background-color: #202124;
-            --preloader-text-color: #fff;
-        }
-    }
-
-    @media (prefers-color-scheme: light) {
-        :root {
-            --preloader-background-color: #fff;
-            --preloader-text-color: #000;
-        }
-    }
-
-    @media (max-width: 600px) {
-        .ml13 {
-            font-size: 2.6rem !important; /* Adjust this value as needed */
-        }
-    }
-
-    .preloader {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem; /* Tailwind 'gap-4' is 1rem */
-        align-items: center;
-        justify-content: center;
-        position: fixed;
-        padding: 12px;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh; /* 'h-screen' is 100% of the viewport height */
-        background-color: var(--preloader-background-color);
-        z-index: 1100; /* 'z-[1100]' sets the z-index */
-        transition: opacity 0.2s ease-in-out;
-    }
-
-    .ml13 {
-        font-size: 3.2rem;
-        /* text-transform: uppercase; */
-        color: var(--preloader-text-color);
-        letter-spacing: -1px;
-        font-weight: 500;
-        font-family: 'Chillax-Variable', sans-serif;
-        text-align: center;
-    }
-
-    .ml13 .word {
-        display: inline-flex;
-        flex-wrap: wrap;
-        white-space: nowrap;
-    }
-
-    .ml13 .letter {
-        display: inline-block;
-        line-height: 1em;
-    }
-</style>
-
-<div class="preloader">
-    
-<script src="/js/libs/anime.min.js"></script>
-
-    <h1 class="ml13">
-        莉蓓的幻想世界
-    </h1>
-    <script>
-        var textWrapper = document.querySelector('.ml13');
-        // Split text into words
-        var words = textWrapper.textContent.trim().split(' ');
-
-        // Clear the existing content
-        textWrapper.innerHTML = '';
-
-        // Wrap each word and its letters in spans
-        words.forEach(function(word) {
-            var wordSpan = document.createElement('span');
-            wordSpan.classList.add('word');
-            wordSpan.innerHTML = word.replace(/\S/g, "<span class='letter'>$&</span>");
-            textWrapper.appendChild(wordSpan);
-            textWrapper.appendChild(document.createTextNode(' ')); // Add space between words
-        });
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
 
 
-        anime.timeline({loop: true})
-            .add({
-                targets: '.ml13 .letter',
-                translateY: [100,0],
-                translateZ: 0,
-                opacity: [0,1],
-                easing: "easeOutExpo",
-                duration: 1400,
-                delay: (el, i) => 300 + 30 * i
-            }).add({
-            targets: '.ml13 .letter',
-            translateY: [0,-100],
-            opacity: [1,0],
-            easing: "easeInExpo",
-            duration: 1200,
-            delay: (el, i) => 100 + 30 * i
-        });
 
-        let themeStatus = JSON.parse(localStorage.getItem('REDEFINE-THEME-STATUS'))?.isDark;
-
-        // If the theme status is not found in local storage, check the preferred color scheme
-        if (themeStatus === undefined || themeStatus === null) {
-            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                themeStatus = 'dark';
-            } else {
-                themeStatus = 'light';
-            }
-        }
-
-        // Now you can use the themeStatus variable in your code
-        if (themeStatus) {
-            document.documentElement.style.setProperty('--preloader-background-color', '#202124');
-            document.documentElement.style.setProperty('--preloader-text-color', '#fff');
-        } else {
-            document.documentElement.style.setProperty('--preloader-background-color', '#fff');
-            document.documentElement.style.setProperty('--preloader-text-color', '#000');
-        }
-
-        window.addEventListener('load', function () {
-            hidePreloaderAfterTimeout(1000); // Hide after 1000 milliseconds once the window has loaded
-        });
-
-        // Backup failsafe: Hide preloader after a maximum of 5000 milliseconds, regardless of the window load event
-        hidePreloaderAfterTimeout(5000);
-
-        function hidePreloaderAfterTimeout(delay) {
-            setTimeout(function () {
-                var preloader = document.querySelector('.preloader');
-                preloader.style.opacity = '0';
-                setTimeout(function () {
-                    preloader.style.display = 'none';
-                }, 200);
-            }, delay);
-        }
-    </script>
-</div>
-    
-
-    
-<link rel="stylesheet" href="/css/style.css">
+<script src="/js/lib/preview.js"></script>
 
 
-    
-        
-<link rel="stylesheet" href="/assets/build/styles.css">
 
-    
 
-    
-<link rel="stylesheet" href="/fonts/fonts.css">
 
-    
-<link rel="stylesheet" href="/fonts/Satoshi/satoshi.css">
+<script src="/js/lib/home.js"></script>
 
-    <!--- Font Part-->
-    
-    
-    
-    
+<script src="https://cdn.staticfile.org/animejs/3.2.1/anime.min.js"></script>
+<link rel="stylesheet" href="/css/main.css" />
+<link rel="preconnect" href="https://static-argvchs.netlify.app" />
 
-    <!--- Inject Part-->
-    
-    <script id="hexo-configurations">
-    window.config = {"hostname":"example.com","root":"/","language":"zh-CN"};
-    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"title_alignment":"left"},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Theme Redefine","subtitle":{"text":[],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.6.0","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"links":null},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2022/8/17 11:45:14"};
-    window.lang_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
-    window.data = {"masonry":false};
-  </script>
-    
-    <!--- Fontawesome Part-->
-    
-<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
-
-    
-<link rel="stylesheet" href="/fontawesome/brands.min.css">
-
-    
-<link rel="stylesheet" href="/fontawesome/solid.min.css">
-
-    
-<link rel="stylesheet" href="/fontawesome/regular.min.css">
-
-    
-    
-    
-    
 <meta name="generator" content="Hexo 7.0.0"></head>
-
-
 <body>
-<div class="progress-bar-container">
-    
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>莉蓓的幻想世界</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;莉蓓的幻想世界</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
 
-    
-        <span class="pjax-progress-bar"></span>
-<!--        <span class="swup-progress-icon">-->
-<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
-<!--        </span>-->
-    
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div id="home-head">
+    <div id="home-background" ref="homeBackground" data-images="/images/background.jpg"></div>
+    <div id="home-info" @click="homeClick">
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="info">
+            <div class="wrap">
+                <h1>莉蓓的幻想世界</h1>
+                <h3>欢迎来到莉蓓的幻想世界</h3>
+                <h5>你好，莉蓓</h5>
+            </div>
+        </span>
+    </div>
+</div>
+<div id="home-posts-wrap" true ref="homePostsWrap">
+    <div id="home-posts">
+        
+
+<div class="post">
+    <a href="/2024/01/17/%E5%8D%8A%E5%A4%9C%E9%97%B2%E8%B0%88/">
+        <h2 class="post-title">半夜闲谈</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/1/17
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>1月14号晚上，突然看见自己的学弟给自己发信息说自己不想学了。当然这段记录其实并没有太大意义，只是记录下来，记录自己做过的事情，且以后有学弟学妹高三的时候可以给人家看看，把自己现在的想法记录下来，不知道以后的自己和现在差距多大，在往回看自己是什么样子的。</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>回了个电话，问了下情况，说是感觉现在学的东西感觉都没有用，什么语数英，这些没有用的东西还要考核，这些学不好还考不上学。现在的我已经大一了，也算是大学生了熬过了那段时间到了大学其实发现和英语和数学还是脱不开关系。根据他的成绩我也感觉应该是考不上公办学校的，应该会去民办学校。</p>
+<p>我说他所的对，现在学的东西就是没有用，提分3月要考试了，也提不了，多半单招和高考都要寄了，我就直说了别学了，还有几个月浪费时间，结合他现在在做数码产品的推销，我让他现在重心放在高二学弟学妹身上发展软关系，来作为一个“炸药”，而大学就是导火索，当他们上大学的时候需要电脑了，他的软关系就可以发挥作用。</p>
+<p>我这个时候还是心里想的还是既然公办去不了，民办学生钱多，电脑应该卖的好，也是比较支持来民办的，没什么区别，后来和他闲聊很多，我总是会发展一些软关系，什么是软关系：我知道这个人是干什么的，有好友，加上了，能聊，这就ok了。这就是我理解的软关系。我和他讲了软关系这个东西，我说为什么现在发展软关系，因为学走不出来了，硬走不行，(我这个人还是比较变通的吧，但是变的不够成熟) 我就让他着重发展自己现在的工作，通过下届学弟学妹为明年做准备，而为什么现在先发展学弟学妹是因为容易，简单。我个人认为学弟学妹对学长应该是抱有一种奇妙的亲切感的，且在短期内他最容易接触的人就是学弟和学妹，再来就是上了大学去宿舍里面串门加好友宣传自己了，但这都是下不年的事情了。</p>
+<p>再聊起我，我总是会发给他一些我和别人的聊天或者是我又做了什么，我感觉应该是让他感觉到我做什么都好成功的样子（其实一点也不），而他现在做什么都没有用。而我回复他的我个人认为应该是比较正确的心理问题，我说我在大学去做这些东西，有时间我愿意去做，认识人不管花钱还是考证书，我都可以拿到手上，这是一种反馈，而我看见了反馈我就愿意去继续做，所以这是我的动力，也是为什么别人看我感觉我好像做了什么又好成功一样，其实我自己学的也不咋地，证书也都是正常要考的，但是为什么别人会感觉好，是因为我拿到手了，而你在高三学习除了考试的成绩得不到其他的反馈，正向的反馈，时间消磨着激情，自然而然就感觉自己什么都不想学了，这是很正常的。打个比方，他如果愿意的话来我学校可以带着他去串门加好友推广，很普通的一个事情，但是做完之后可能会给他带来业绩（马内），他看见后自然有劲，这就是一种正向的反馈，我想表达给他的就是这样的一种意思，没有一种东西可以支撑着他前进所以导致这种想法的产生。</p>
+<p>也是在电话里面聊了快两个小时，对于没有对象的我来说和别人打超过10分钟就已经很长时间的情况来看，我个人应该是上心了的，至于最后学弟是怎么想的我就不知道了</p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>很普通的一次对话，也是很常见的一种学弟对学长诉苦的过程。但是我为什么要记录，我现在在大一，我确实没有经历过社会，我不知道社会是什么样子的，我的思想也就停留在没有经历过社会的高度，但是我认为今天我的想法我可以记录下来，等我以后了突然翻看自己博客的日记，再来评价一下现在的自己。和他说了这么多，但是说实话我自己也不知道自己会怎么样，再拨出电话的时候，其实心里面也只是想安慰一下，但是不知道为什么慢慢就变成了说教和讲自己怎么从一次次规划失败再重新走的，不过也算是助人为乐了。</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/%E6%97%A5%E8%AE%B0/" style="color: #00a596">日记</a>
+        </span>
+        
+    </div>
+    <a href="/2024/01/17/%E5%8D%8A%E5%A4%9C%E9%97%B2%E8%B0%88/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2024/01/08/%E6%B5%8B%E8%AF%95/">
+        <h2 class="post-title">测试</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/1/8
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+        
+    </div>
+    <a href="/2024/01/08/%E6%B5%8B%E8%AF%95/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2024/01/05/2023%E5%B9%B4%E5%BA%A6%E6%89%B9%E6%96%97/">
+        <h2 class="post-title">2023年度批斗</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/1/5
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>preface：（因为某些原因晚发了一天）</p>
+<p>​        今天也是来到了2023的最后一天，本来是没有想法写自己对于今年的一个总结，但是看见了我认识，但他不认识我的大佬的年度总结，觉得既然自己想要从事这个行业，还是应该给自己的总结，也是给明年的一年立下需要做的事情的flag，需要提前立，可能不太好，哈哈哈。</p>
+<p>正文：</p>
+<p>​	好，现在开始正式讲述今年小贤子一年来的艰苦历程，鼓掌鼓掌。</p>
+<p>​	回顾今年从开始到结尾，也是一段努力-怠惰-半努力-迷茫不定-努力的一段反复心理斗争的故事。从国赛没有去成回到正常班级上课后，也是刚开始进入了努力的状态，感觉确实那段时间是有学习的激情（除了数学），在后续单招失利后，就变成了怠惰的状态，已经不想学什么东西了，一年也是像这样反反复复的一直在心里中争斗，不过还是那句话呀，我并不是因为说我要通过这一年的集训队学习而一定要获得什么成就，获得什么免试的资格这些，而是说我通过了这一次经历我知道了我以后想从事哪一方面的工作，以及知道了自己以后要学习什么，我心里清楚自己知道了这些，所以并不感觉如果不去，我会不会现在在更好的地方，当然这也是别人问我时，我确实这样回复了的，不过也是顺利的有了学上，我当然还是感觉去的学校还是好的，哈哈哈，这就是在我再次进入半努力的状态前，我自己对自己是如何在进入集训队的时间中，找到自己的目标和学习规划的总结。</p>
+<p>​	其次在今年当中，还是要感谢我的学长，在前期当中，一直在告诉我该怎么走，以及很多的建议，还有忽悠我的羁绊，当然还有杰哥的课程，虽然现在很水不讲课了，等等。突然感觉在写这些之前，并没有什么感触，但是当写的时候发现还是有很多人在我的身上付出了很多的时间，不管是带我玩也好，跟我学习的也好，其实自己有些时候并不是一个人，当然，在今天跨年的时候如果我有对象就好了。</p>
+<p>​	之后是今年所完成的事情，估摸着也就是证书吧，也是在今年下半年正式踏入信息安全的领域了，开始考证书，学东西。现在学习也不像之前一样了，我完成就行了，现在知道去往前追一点点，去摸一下原理，再去实操，做事也不急了，知道慢慢来了，这我感觉也是得益于掌控者那边的老师吧，看见他们有一次发朋友圈是说 ” 拉长学习周期 “ 这么一句话，突然就感觉，自己在接触信息安全到现在，基本上都是急于求成，完成了就丢，看了视频就以为会，导致始终在原地踏步，哪怕别人问我的时候依然可以说出来，但是在下定决心打基础时实操却做不出来，这就像是我知道这个东西叫做香蕉，但是我不知道他是什么味道，因为我没有主动尝试过，也没有被动尝试过，但是经过了今年自己很多心性的改变，相信在2024年，自己在学习当中，一定会比今年更好。</p>
+<p>​	接下来就是明年要做的事情了，也就是最关键的flag，鼓掌鼓掌。</p>
+<p>​	还是1月14号的nisp二级把证书拿到手，今年也已经把信息安全工程师考完了，接下来是信息安全管理，以及有经济条件和实力之后去考oscp，把证书方面先拿到。因为我自己也感觉天赋不是那么好，信息安全其实也就刚学一年，还不是很精，所以2024的目标就是把web方向的东西，根据自己爬的别人的思维导图先学完，掌握，然后查漏补缺，在制定下一步的计划。同时在学习中冲刺专升本，提高一下自己的学历，毕竟不考不损失，万一上了就赚大了（认真脸）。</p>
+<p>​	这么多也就是我这平平淡淡的一年，对于别人来说没有惊艳，对于大佬来说如图喝水一般，但是对于我自己来说又是很难形容的一年，但是过了今年，确实的想要改变一下。曾经我花掉了太多的运气，而现在我感觉自己已经没有运气可用了，如果再不提高自己的话，确实不知道当第三年我要去实习的时候，除了力气，还有什么是我可以拿出来的东西。</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+        
+    </div>
+    <a href="/2024/01/05/2023%E5%B9%B4%E5%BA%A6%E6%89%B9%E6%96%97/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2024/01/05/hello-world/">
+        <h2 class="post-title">Hello World</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/1/5
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="highlight bash">$ hexo new <span class="string">&quot;My New Post&quot;</span></code></pre>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="highlight bash">$ hexo server</code></pre>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="highlight bash">$ hexo generate</code></pre>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="highlight bash">$ hexo deploy</code></pre>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+        
+    </div>
+    <a href="/2024/01/05/hello-world/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2024/01/01/%E5%BC%80%E5%B7%A5%E5%A4%A7%E5%90%89%EF%BC%81/">
+        <h2 class="post-title">开工大吉！</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/1/1
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h2 id="正式开工"><a href="#正式开工" class="headerlink" title="正式开工"></a>正式开工</h2><p>今天是2024的1月1日，也是经过了没有备份导致网站丢失后，重新建好的一天。2023就像是总结的那样，实际上一年中并没有完成或者是达到什么有一定可以拿出来当作谈资的事情，也没有好好的完成自己的学业这些，所以姑且也可以说挺不好的。</p>
+<p>如果问我那为什么现在突然要把网站建回来，那肯定是因为决定在之后，好好的踏入这个行业，坚持更新笔记，完成自己的目标，除此之外就是在emo日记中记录生活，现在可能就是我最好的三年时间了，等我走出了这个校门之后，我的时间可能全部都要交给万恶的公司，如果我不在这个时候记录自己的生活，可能在我如同机器一样上班之后，也会忘掉，这几年中我有经历过什么，所以不止是学习，生活也要记录，当然，这是给我自己看的。</p>
+<h2 id="为何建站"><a href="#为何建站" class="headerlink" title="为何建站"></a>为何建站</h2><p>对，笔记这个东西，生活这个东西，像是语雀、typora、朋友圈，这些就已经可以涵盖了，为什么要单独建立一个站出来，首先，静态网站现在我认为还是在年轻人中流行的吧，所以站就建出来了，当然还是写出来给自己看的，因为个人就喜欢这种 <strong>花里胡哨</strong> 的东西，在这个前提下，那就肯定需要一个，万一到时候有了学弟学妹过来问问题，啪的就一个站丢过去，那肯定效果挺好的。</p>
+<h2 id="今后目标"><a href="#今后目标" class="headerlink" title="今后目标"></a>今后目标</h2><p>坚持写笔记，坚持去图书馆，多交朋友，多认识大佬，吃好喝好睡好。</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/emo%E6%97%A5%E8%AE%B0/" style="color: #00bcd4">emo日记</a>
+        </span>
+        
+    </div>
+    <a href="/2024/01/01/%E5%BC%80%E5%B7%A5%E5%A4%A7%E5%90%89%EF%BC%81/" class="go-post">阅读全文</a>
 </div>
 
 
-<main class="page-container" id="swup">
-
+        <div class="page-current">
     
-        
-    <style>
-        .home-banner-container {
-            background: none !important;
-        }
-        .home-article-item,
-        .sidebar-links,
-        .sidebar-content,
-        a.page-number,
-        a.extend,
-        .sidebar-links .links:hover,
-        .right-bottom-tools,
-        footer.footer {
-            background-color: var(--background-color-transparent-80) !important;
-        }
-        .right-bottom-tools:hover,
-        a.page-number:hover,
-        a.extend:hover {
-            background-color: var(--primary-color) !important;
-        }
-        .site-info,
-        .home-article-sticky-label {
-            background-color: var(--background-color-transparent-15) !important;
-        }
-        .home-article-sticky-label {
-            backdrop-filter: none !important;
-        }
-    </style>
-    <div class="home-banner-background transition-fade fixed top-0 left-0 w-screen h-screen scale-125 sm:scale-110 box-border will-change-transform bg-cover">
-        <img src="/images/wallhaven-wqery6-light.webp" alt="home-banner-background" class="w-full h-full object-cover dark:hidden">
-        <img src="/images/wallhaven-wqery6-dark.webp" alt="home-banner-background" class="w-full h-full object-cover hidden dark:block">
+    <span class="current">1</span>
+    
+    
+    
+    
+</div>
+
     </div>
-
-
-<div class="home-banner-container flex justify-center items-center transition-fade relative">
     
-    <div class="content mt-8 flex flex-col justify-center items-center">
-        <div class="description flex flex-col justify-center items-center w-screen font-medium text-center"
+    <div id="home-card">
+        <div id="card-style">
+    <div id="card-div">
+        <div class="avatar">
+            <img src="/images/avatar.jpg" alt="avatar" />
+        </div>
+        <div class="name">莉蓓</div>
+        <div class="description">
+            <p>Description<br>…</p>
+
+        </div>
         
-        >
-            Theme Redefine
+        
+        <div class="friend-links">
             
-            
-                <p><i id="subtitle"></i></p>
+            <div class="friend-link">
+                <a target="_blank" rel="noopener" href="https://argvchs.github.io">Argvchs</a>
+            </div>
             
         </div>
         
     </div>
+</div>
+
+    </div>
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2024 莉蓓的幻想世界
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;莉蓓
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
     <script>
-        const scrollToMain = ()=> {
-            console.log('scroll');
-            const target = document.querySelector('.main-content-container');
-            target.scrollIntoView({ behavior: 'smooth'});
+        console.info("Welcome to Argvchs' blog!");
+        if (!window.hasOwnProperty("ontouchstart")) {
+            let html = '<canvas id="fireworks" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 32767"></canvas><script src="https://static-argvchs.netlify.app/js/fireworks.min.js"><\/script>';
+            document.body.append(document.createRange().createContextualFragment(html));
         }
     </script>
-</div>
     
-
-    <div class="main-content-container">
-
-
-        <div class="main-content-header">
-            <header class="navbar-container">
-
-    <div class="navbar-content has-home-banner">
-        <div class="left">
-            
-            <a class="logo-title" href="/">
-                <h1>
-                莉蓓的幻想世界
-                </h1>
-            </a>
-        </div>
-
-        <div class="right">
-            <!-- PC -->
-            <div class="desktop">
-                <ul class="navbar-list">
-                    
-                        
-                            
-
-                            <li class="navbar-item">
-                                <!-- Menu -->
-                                <a class="active"
-                                   href="/"
-                                        >
-                                    <i class="fa-regular fa-house fa-fw"></i>
-                                    首页
-                                    
-                                </a>
-
-                                <!-- Submenu -->
-                                
-                            </li>
-                    
-                    
-                </ul>
-            </div>
-            <!-- Mobile -->
-            <div class="mobile">
-                
-                <div class="icon-item navbar-bar">
-                    <div class="navbar-bar-middle"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Mobile drawer -->
-    <div class="navbar-drawer h-screen w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
-        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
-            
-                
-                    
-
-                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
-                        
-                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
-                           href="/"
-                        >
-                            <span>
-                                首页
-                            </span>
-                            
-                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
-                            
-                        </a>
-                        
-
-                        
-                    </li>
-            
-        </ul>
-
-        <div class="statistics flex justify-around my-2.5">
-    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">2</div>
-        <div class="label text-third-text-color text-sm">标签</div>
-    </a>
-    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">0</div>
-        <div class="label text-third-text-color text-sm">分类</div>
-    </a>
-    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">5</div>
-        <div class="label text-third-text-color text-sm">文章</div>
-    </a>
-</div>
-    </div>
-
-    <div class="window-mask"></div>
-
-</header>
-
-
-        </div>
-
-        <div class="main-content-body">
-
-            
-                <div class="home-sidebar-container">
-    <div class="sticky-container sticky">
-        
-        
-            
-            <div class="sidebar-content" >
-                <div class="avatar flex justify-center">
-    <img src="/images/redefine-avatar.svg">
-</div>
-                <div class="author flex flex-col justify-center my-2.5 mx-0">
-    <div class="name">莉蓓</div>
-    
-        <div class="label">Lv1</div>
-    
-</div>
-                <div class="statistics flex justify-around my-2.5">
-    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">2</div>
-        <div class="label text-third-text-color text-sm">标签</div>
-    </a>
-    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">0</div>
-        <div class="label text-third-text-color text-sm">分类</div>
-    </a>
-    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">5</div>
-        <div class="label text-third-text-color text-sm">文章</div>
-    </a>
-</div>
-            </div>
-        
-
-    </div>
-</div>
-
-            
-
-            <div class="main-content">
-
-                
-                    <div class="home-content-container">
-    <ul class="home-article-list">
-        
-            <li class="home-article-item">
-
-                
-                    <div class="absolute top-[12px] right-[12px] text-[0.7rem] text-third-text-color rounded-medium bg-background-color-transparent-15 py-[2px] px-[10px] border border-border-color z-1 hover:text-first-text-color cursor-default">
-                        <i class="fa-regular fa-thumbtack mr-[3px] text-[0.65rem]"></i>置顶
-                    </div>
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/01/01/%E5%BC%80%E5%B7%A5%E5%A4%A7%E5%90%89%EF%BC%81/">
-                            开工大吉！
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            正式开工今天是2024的1月1日，也是经过了没有备份导致网站丢失后，重新建好的一天。2023就像是总结的那样，实际上一年中并没有完成或者是达到什么有一定可以拿出来当作谈资的事情，也没有好好的完成自己的学业这些，所以姑且也可以说挺不好的。
-如果问我那为...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Mon Jan 01 2024 23:25:29 GMT+0800">
-                
-                    2024-01-01
-                
-            </span>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/emo%E6%97%A5%E8%AE%B0/">emo日记</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/2024/01/01/%E5%BC%80%E5%B7%A5%E5%A4%A7%E5%90%89%EF%BC%81/">阅读全文<span class="seo-reader-text">开工大吉！</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/01/17/%E5%8D%8A%E5%A4%9C%E9%97%B2%E8%B0%88/">
-                            半夜闲谈
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            起因1月14号晚上，突然看见自己的学弟给自己发信息说自己不想学了。当然这段记录其实并没有太大意义，只是记录下来，记录自己做过的事情，且以后有学弟学妹高三的时候可以给人家看看，把自己现在的想法记录下来，不知道以后的自己和现在差距多大，在往回看自己是什么...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Wed Jan 17 2024 00:30:49 GMT+0800">
-                
-                    2024-01-17
-                
-            </span>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E6%97%A5%E8%AE%B0/">日记</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/2024/01/17/%E5%8D%8A%E5%A4%9C%E9%97%B2%E8%B0%88/">阅读全文<span class="seo-reader-text">半夜闲谈</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/01/08/%E6%B5%8B%E8%AF%95/">
-                            测试
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Mon Jan 08 2024 00:36:08 GMT+0800">
-                
-                    2024-01-08
-                
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2024/01/08/%E6%B5%8B%E8%AF%95/">阅读全文<span class="seo-reader-text">测试</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/01/05/2023%E5%B9%B4%E5%BA%A6%E6%89%B9%E6%96%97/">
-                            2023年度批斗
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            preface：（因为某些原因晚发了一天）
-​        今天也是来到了2023的最后一天，本来是没有想法写自己对于今年的一个总结，但是看见了我认识，但他不认识我的大佬的年度总结，觉得既然自己想要从事这个行业，还是应该给自己的总结，也是给明年的一...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Fri Jan 05 2024 22:48:32 GMT+0800">
-                
-                    2024-01-05
-                
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2024/01/05/2023%E5%B9%B4%E5%BA%A6%E6%89%B9%E6%96%97/">阅读全文<span class="seo-reader-text">2023年度批斗</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/01/05/hello-world/">
-                            Hello World
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            Welcome to Hexo ! This is your very first post. Check documentation  for more info. If you get any problems when using Hexo, ...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Fri Jan 05 2024 20:57:31 GMT+0800">
-                
-                    2024-01-05
-                
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2024/01/05/hello-world/">阅读全文<span class="seo-reader-text">Hello World</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-    </ul>
-
-    <div class="home-paginator px-7 py-5">
-        <div class="paginator">
-    <span class="page-number current">1</span>
-</div>
-
-    </div>
-</div>
-
-                    <div class="comment-container pjax"></div>
-                
-
-            </div>
-
-            
-
-        </div>
-
-        <div class="main-content-footer">
-            <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
-    <div class="info-container py-3 text-center">
-        
-        <div class="text-center">
-            &copy;
-            
-              <span>2022</span>
-              -
-            
-            2024&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">莉蓓</a>
-        </div>
-        
-            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
-            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
-                
-                    <span id="busuanzi_container_site_uv" class="lg:!block">
-                        <span class="text-sm">访问人数</span>
-                        <span id="busuanzi_value_site_uv"></span>
-                    </span>
-                
-                
-                    <span id="busuanzi_container_site_pv" class="lg:!block">
-                        <span class="text-sm">总访问量</span>
-                        <span id="busuanzi_value_site_pv"></span>
-                    </span>
-                
-            </div>
-        
-        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
-            <span class="lg:block text-sm">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a> 驱动</span>
-            <span class="text-sm lg:block">主题&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.6.0</a></span>
-        </div>
-        
-        
-            <div>
-                博客已运行 <span class="odometer" id="runtime_days" ></span> 天 <span class="odometer" id="runtime_hours"></span> 小时 <span class="odometer" id="runtime_minutes"></span> 分钟 <span class="odometer" id="runtime_seconds"></span> 秒
-            </div>
-        
-        
-            <script data-swup-reload-script>
-                try {
-                    function odometer_init() {
-                    const elements = document.querySelectorAll('.odometer');
-                    elements.forEach(el => {
-                        new Odometer({
-                            el,
-                            format: '( ddd).dd',
-                            duration: 200
-                        });
-                    });
-                    }
-                    odometer_init();
-                } catch (error) {}
-            </script>
-        
-        
-        
-    </div>  
-</footer>
-        </div>
-    </div>
-
-    
-
-    <div class="right-side-tools-container">
-        <div class="side-tools-container">
-    <ul class="hidden-tools-list">
-        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
-            <i class="fa-regular fa-magnifying-glass-plus"></i>
-        </li>
-
-        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
-            <i class="fa-regular fa-magnifying-glass-minus"></i>
-        </li>
-
-        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
-            <i class="fa-regular fa-moon"></i>
-        </li>
-
-        <!-- rss -->
-        
-
-        
-
-        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
-            <i class="fa-regular fa-arrow-down"></i>
-        </li>
-    </ul>
-
-    <ul class="visible-tools-list">
-        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
-            <i class="fa-regular fa-cog fa-spin"></i>
-        </li>
-        
-            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
-                <i class="arrow-up fas fa-arrow-up"></i>
-                <span class="percent"></span>
-            </li>
-        
-        
-    </ul>
-</div>
-
-    </div>
-
-    <div class="image-viewer-container">
-    <img src="">
-</div>
-
-
-    
-
-</main>
-
-
-    
-<script src="/js/libs/Swup.min.js"></script>
-
-<script src="/js/libs/SwupSlideTheme.min.js"></script>
-
-<script src="/js/libs/SwupScriptsPlugin.min.js"></script>
-
-<script src="/js/libs/SwupProgressPlugin.min.js"></script>
-
-<script src="/js/libs/SwupScrollPlugin.min.js"></script>
-
-<script src="/js/libs/SwupPreloadPlugin.min.js"></script>
-
-<script>
-    const swup = new Swup({
-        plugins: [
-            new SwupScriptsPlugin({
-                optin: true,
-            }),
-            new SwupProgressPlugin(),
-            new SwupScrollPlugin({
-                offset: 80,
-            }),
-            new SwupSlideTheme({
-                mainElement: ".main-content-body",
-            }),
-            new SwupPreloadPlugin(),
-        ],
-        containers: ["#swup"],
-    });
-</script>
-
-
-
-
-
-
-
-
-<script src="/js/tools/imageViewer.js" type="module"></script>
-
-<script src="/js/utils.js" type="module"></script>
-
-<script src="/js/main.js" type="module"></script>
-
-<script src="/js/layouts/navbarShrink.js" type="module"></script>
-
-<script src="/js/tools/scrollTopBottom.js" type="module"></script>
-
-<script src="/js/tools/lightDarkSwitch.js" type="module"></script>
-
-<script src="/js/layouts/categoryList.js" type="module"></script>
-
-
-
-
-
-    
-<script src="/js/tools/codeBlock.js" type="module"></script>
-
-
-
-
-    
-<script src="/js/layouts/lazyload.js" type="module"></script>
-
-
-
-
-    
-<script src="/js/tools/runtime.js"></script>
-
-    
-<script src="/js/libs/odometer.min.js"></script>
-
-    
-<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
-
-
-
-
-  
-<script src="/js/libs/Typed.min.js"></script>
-
-  
-<script src="/js/plugins/typed.js" type="module"></script>
-
-
-
-
-
-
-
-
-
-<div class="post-scripts" data-swup-reload-script>
-    
-        
-<script src="/js/tools/tocToggle.js" type="module"></script>
-
-<script src="/js/layouts/toc.js" type="module"></script>
-
-<script src="/js/plugins/tabs.js" type="module"></script>
-
-    
-</div>
-
-
 </body>
 </html>
