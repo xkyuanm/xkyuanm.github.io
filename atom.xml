@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-01-16T20:11:51.323Z</updated>
+  <updated>2024-01-23T21:05:46.489Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>OWASP TOP 10</title>
+    <link href="http://example.com/2024/01/24/OWASP-TOP-10/"/>
+    <id>http://example.com/2024/01/24/OWASP-TOP-10/</id>
+    <published>2024-01-23T20:58:20.000Z</published>
+    <updated>2024-01-23T21:05:46.489Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="什么是TOP-10"><a href="#什么是TOP-10" class="headerlink" title="什么是TOP 10"></a>什么是TOP 10</h2><p><a class="link"   href="https://owasp.org/Top10/zh_CN/" >首頁 - OWASP Top 10:2021 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><h2 id="为什么了解TOP-10"><a href="#为什么了解TOP-10" class="headerlink" title="为什么了解TOP 10"></a>为什么了解TOP 10</h2><p>TOP 10 每四年更新一次，就现在而言对于我这种初学者来说，可以作为一种指引，告诉我当下的多发漏洞，以TOP 10 作为学习的指引，知道从哪些方面学习，不至于过于迷茫。</p><h2 id="TOP-10"><a href="#TOP-10" class="headerlink" title="TOP 10"></a>TOP 10</h2><p><strong>A01:2021-权限控制失效</strong> </p><p><strong>A02:2021-加密机制失效</strong> </p><p><strong>A03:2021-注入式攻击</strong> </p><p><strong>A04:2021-不安全设计</strong> </p><p><strong>A05:2021-安全设定缺陷</strong> </p><p><strong>A06:2021-危险或过旧的组件</strong> </p><p><strong>A07:2021-认证及验证机制失效</strong> </p><p><strong>A08:2021-软件及资料完整性失效</strong> </p><p><strong>A09:2021-安全记录及监控失效</strong> </p><p><strong>A10:2021-服务器端请求伪造</strong> </p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;什么是TOP-10&quot;&gt;&lt;a href=&quot;#什么是TOP-10&quot; class=&quot;headerlink&quot; title=&quot;什么是TOP 10&quot;&gt;&lt;/a&gt;什么是TOP 10&lt;/h2&gt;&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://owasp.org/</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>主题使用</title>
@@ -38,31 +58,6 @@
     
     
     <category term="主题" scheme="http://example.com/tags/%E4%B8%BB%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>测试</title>
-    <link href="http://example.com/2024/01/17/%E6%B5%8B%E8%AF%95/"/>
-    <id>http://example.com/2024/01/17/%E6%B5%8B%E8%AF%95/</id>
-    <published>2024-01-16T19:09:06.000Z</published>
-    <updated>2024-01-16T19:09:26.639Z</updated>
-    
-    <content type="html"><![CDATA[<p>1</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;1&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="学习" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="信息安全" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/"/>
     
   </entry>
   
