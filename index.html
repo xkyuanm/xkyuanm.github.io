@@ -553,18 +553,20 @@
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/2024/05/06/SQL%E6%BC%8F%E6%B4%9E%E5%9F%BA%E7%A1%80/">
-                            SQL漏洞基础
+                        <a href="/2024/05/06/%E5%AE%BD%E5%AD%97%E8%8A%82%E6%B3%A8%E5%85%A5/">
+                            宽字节注入
                         </a>
                     </h3>
 
                     <div class="home-article-content markdown-body">
                         
-                            SQL原理在网站中输入数据库语句，语句被执行，则存在漏洞
-语法：多为固定语句Select_from_where  \ \ | select 列 from 表名 where …
-Select：查询
-From：来自
-where：当…条件成立的时候语法执行...
+                            漏洞介绍1，涉及函数
+
+addslashes()：函数返回在预定义字符之前添加反斜杠字符串
+
+mysql_real_esape_string()：函数转义SQL语句中使用的字符串的特殊字符
+
+mysql_escape_string()：转义一个字符串...
                         
                     </div>
 
@@ -609,7 +611,7 @@ where：当…条件成立的时候语法执行...
         
     </div>
 
-    <a href="/2024/05/06/SQL%E6%BC%8F%E6%B4%9E%E5%9F%BA%E7%A1%80/">阅读全文<span class="seo-reader-text">SQL漏洞基础</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/2024/05/06/%E5%AE%BD%E5%AD%97%E8%8A%82%E6%B3%A8%E5%85%A5/">阅读全文<span class="seo-reader-text">宽字节注入</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>

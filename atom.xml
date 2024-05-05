@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-05-05T20:40:50.087Z</updated>
+  <updated>2024-05-05T20:56:54.552Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,19 +17,21 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>SQL漏洞基础</title>
-    <link href="http://example.com/2024/05/06/SQL%E6%BC%8F%E6%B4%9E%E5%9F%BA%E7%A1%80/"/>
-    <id>http://example.com/2024/05/06/SQL%E6%BC%8F%E6%B4%9E%E5%9F%BA%E7%A1%80/</id>
+    <title>宽字节注入</title>
+    <link href="http://example.com/2024/05/06/%E5%AE%BD%E5%AD%97%E8%8A%82%E6%B3%A8%E5%85%A5/"/>
+    <id>http://example.com/2024/05/06/%E5%AE%BD%E5%AD%97%E8%8A%82%E6%B3%A8%E5%85%A5/</id>
     <published>2024-05-05T20:10:23.000Z</published>
-    <updated>2024-05-05T20:40:50.087Z</updated>
+    <updated>2024-05-05T20:56:54.552Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="SQL原理"><a href="#SQL原理" class="headerlink" title="SQL原理"></a>SQL原理</h2><p>在网站中输入数据库语句，语句被执行，则存在漏洞</p><h2 id="语法：多为固定语句"><a href="#语法：多为固定语句" class="headerlink" title="语法：多为固定语句"></a>语法：多为固定语句</h2><p>Select_from_where  \ \ | select 列 from 表名 where …</p><p>Select：查询</p><p>From：来自</p><p>where：当…条件成立的时候语法执行</p><p>例：</p><p>​?id&#x3D;-1’ union select 1,2,3 –+</p><p>​select * from user where id&#x3D;-1’ union select 1.2.3’ limt 0,1</p><h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2>]]></content>
+    <content type="html"><![CDATA[<h2 id="漏洞介绍"><a href="#漏洞介绍" class="headerlink" title="漏洞介绍"></a>漏洞介绍</h2><p>1，涉及函数</p><ul><li><p>addslashes()：函数返回在预定义字符之前添加反斜杠字符串</p></li><li><p>mysql_real_esape_string()：函数转义SQL语句中使用的字符串的特殊字符</p></li><li><p>mysql_escape_string()：转义一个字符串</p></li></ul><p>2，原理分析</p><p>  何为宽窄字节</p><ul><li><p>当某字符的大小为一个字节时，称其字符为窄字节。</p></li><li><p>当某字符的大小为两个字节时，称其字符为宽字节。</p></li><li><p>所有英文默认占一个字符，汉字占两个字符。</p></li><li><p>常见的宽字节编码：GB2312，GBK，GB18030，BLG5，Shift_JIS</p></li></ul><p>为什么会产生宽字节，其中就涉及到编码格式的问题，宽字节注入主要是源于程序员设置数据库编码与PHP编码设置为不同的两个编码格式从而导致产生宽字节注入。<br>    如果数据库使用的是GBK编码而PHP编码为UTF8就可能出现注入问题，原因是程序员为了防止SQL注入，就会调用上面的几种函数，将单引号或者双引号进行转义操作，转义无非便是在单或双引号前加上斜杠 () 进行转义，但这样并不是安全的，因为数据库使用的是宽字节编码，两个连在一起的字符会被当做一个汉字，而在PHP使用的UTF8编码则认为是两个独立的字符，如果在单或双引号前添加一个字符，使其和斜杠 () 组合被当成一个汉字，从而保留单或双引号，使其发挥作用。但添加的字符的Ascii要大于128，这样两个字符才能组合成汉字，因为前一个ascii码要大于128，才到汉字的范围。</p><p>3，什么是GBK编码</p><p>一种汉字编码</p><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>以靶场举例，输入单引号后 1和’之间出现了\正如描述中所说，转义无非就是把单引号或者双引号前面加上\进行转义，想要成功只需要想办法将\去掉就行，而现在知道了漏洞产生是由编码引起，尝试利用编码解决问题。</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.nlark.com/yuque/0/2024/png/29307231/1714939029512-68f0d884-226f-4d0c-bfe4-53df2337ed45.png?x-oss-process=image/format,webp/resize,w_937,limit_0"                      alt="image.png"                ></p><p>\在编码中为 %5C这是后一个字节，只需要前面的字节可以和他组合并大于ascii128就可以达到需要的效果，常见的方式有 %df | %a1，如</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://cdn.nlark.com/yuque/0/2024/png/29307231/1714939430278-232f9bff-c8be-45c2-9f85-43017d5ca457.png?x-oss-process=image/format,webp/resize,w_937,limit_0"                      alt="image.png"                ></p><p>如此就可以实现注入的效果，但是为什么说转义无非就是引号前加斜杠转义，这是因为使用了addslashes()函数，此函数就是在预定义的字符的前面添加反斜杠，知道原理就可以很好的处理了。</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h2 id=&quot;SQL原理&quot;&gt;&lt;a href=&quot;#SQL原理&quot; class=&quot;headerlink&quot; title=&quot;SQL原理&quot;&gt;&lt;/a&gt;SQL原理&lt;/h2&gt;&lt;p&gt;在网站中输入数据库语句，语句被执行，则存在漏洞&lt;/p&gt;
-&lt;h2 id=&quot;语法：多为固定语句&quot;&gt;&lt;a href=&quot;#语</summary>
+    <summary type="html">&lt;h2 id=&quot;漏洞介绍&quot;&gt;&lt;a href=&quot;#漏洞介绍&quot; class=&quot;headerlink&quot; title=&quot;漏洞介绍&quot;&gt;&lt;/a&gt;漏洞介绍&lt;/h2&gt;&lt;p&gt;1，涉及函数&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;addslashes()：函数返回在预定义字符之前添加反斜杠字符串&lt;/p&gt;
+&lt;</summary>
       
     
     
