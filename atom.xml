@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-05-05T20:23:45.824Z</updated>
+  <updated>2024-05-05T20:33:01.849Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://example.com/2024/05/06/SQL%E6%BC%8F%E6%B4%9E%E5%9F%BA%E7%A1%80/"/>
     <id>http://example.com/2024/05/06/SQL%E6%BC%8F%E6%B4%9E%E5%9F%BA%E7%A1%80/</id>
     <published>2024-05-05T20:10:23.000Z</published>
-    <updated>2024-05-05T20:23:45.824Z</updated>
+    <updated>2024-05-05T20:33:01.849Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="SQL原理"><a href="#SQL原理" class="headerlink" title="SQL原理"></a>SQL原理</h2><p>在网站中输入数据库语句，语句被执行，则存在漏洞</p><h2 id="语法：多为固定语句"><a href="#语法：多为固定语句" class="headerlink" title="语法：多为固定语句"></a>语法：多为固定语句</h2><p>Select_from_whereselect 列 from 表名 where …</p><p>Select：查询</p><p>From：来自</p><p>where：当…条件成立的时候语法执行</p><p>例：</p><p>​?id&#x3D;-1’ union select 1,2,3 –+</p><p>​select * from user where id&#x3D;-1’ union select 1.2.3’ limt 0,1</p><h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2>]]></content>
+    <content type="html"><![CDATA[<h2 id="SQL原理"><a href="#SQL原理" class="headerlink" title="SQL原理"></a>SQL原理</h2><p>在网站中输入数据库语句，语句被执行，则存在漏洞</p><h2 id="语法：多为固定语句"><a href="#语法：多为固定语句" class="headerlink" title="语法：多为固定语句"></a>语法：多为固定语句</h2><p>Select_from_where&amp;nbps|&amp;nbps select 列 from 表名 where …</p><p>Select：查询</p><p>From：来自</p><p>where：当…条件成立的时候语法执行</p><p>例：</p><p>​?id&#x3D;-1’ union select 1,2,3 –+</p><p>​select * from user where id&#x3D;-1’ union select 1.2.3’ limt 0,1</p><h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2>]]></content>
     
     
       
