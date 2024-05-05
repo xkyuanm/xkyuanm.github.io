@@ -13,22 +13,22 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/2024/03/13/3-13午夜/"/>
+    <link rel="canonical" href="http://example.com/2024/05/06/sql漏洞基础/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="也许我应该有更好的方式去回应别人的期待这个月3.10号回家，晚上和学长聊了很多，学习，工作，为人处世的关系，很多东西，我理应更感谢他，但是目前的我并拿不出什么东西。 10号那天之前，我对自己很多东西都抱有期待，但是自从听说了2026年的难度之后，可能专升本这条路就不能在走了，没有想过竟然这么难，不过试一试还是要的，大不了后面去一些偏远一点的本科，但是起码他是本科学历，希望之后的专升本还是能上吧。">
+        <meta name="description" content="SQL原理在网站中输入数据库语句，语句被执行，则存在漏洞 语法：多为固定语句Select_from_where	select 列 from 表名 where … Select：查询 From：来自 where：当…条件成立的时候语法执行 例： ​	?id&#x3D;-1’ union select 1,2,3 –+ ​	select * from user where id&#x3D;-1’ un">
 <meta property="og:type" content="article">
-<meta property="og:title" content="3&#x2F;13午夜">
-<meta property="og:url" content="http://example.com/2024/03/13/3-13%E5%8D%88%E5%A4%9C/index.html">
+<meta property="og:title" content="SQL漏洞基础">
+<meta property="og:url" content="http://example.com/2024/05/06/SQL%E6%BC%8F%E6%B4%9E%E5%9F%BA%E7%A1%80/index.html">
 <meta property="og:site_name" content="莉蓓的幻想世界">
-<meta property="og:description" content="也许我应该有更好的方式去回应别人的期待这个月3.10号回家，晚上和学长聊了很多，学习，工作，为人处世的关系，很多东西，我理应更感谢他，但是目前的我并拿不出什么东西。 10号那天之前，我对自己很多东西都抱有期待，但是自从听说了2026年的难度之后，可能专升本这条路就不能在走了，没有想过竟然这么难，不过试一试还是要的，大不了后面去一些偏远一点的本科，但是起码他是本科学历，希望之后的专升本还是能上吧。">
+<meta property="og:description" content="SQL原理在网站中输入数据库语句，语句被执行，则存在漏洞 语法：多为固定语句Select_from_where	select 列 from 表名 where … Select：查询 From：来自 where：当…条件成立的时候语法执行 例： ​	?id&#x3D;-1’ union select 1,2,3 –+ ​	select * from user where id&#x3D;-1’ un">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-03-12T16:38:23.000Z">
-<meta property="article:modified_time" content="2024-03-12T16:59:08.089Z">
+<meta property="article:published_time" content="2024-05-05T20:10:23.000Z">
+<meta property="article:modified_time" content="2024-05-05T20:23:45.824Z">
 <meta property="article:author" content="莉蓓">
-<meta property="article:tag" content="阳光日记">
+<meta property="article:tag" content="注入类漏洞">
 <meta name="twitter:card" content="summary">
     
     
@@ -41,7 +41,7 @@
     
     <title>
         
-            3/13午夜 -
+            SQL漏洞基础 -
         
         莉蓓的幻想世界
     </title>
@@ -459,7 +459,7 @@
         <div class="article-title relative w-full">
             
                 <div class="w-full flex items-center pt-6 justify-start">
-                    <h1 class="article-title-regular text-second-text-color text-4xl md:text-6xl font-bold px-2 sm:px-6 md:px-8 py-3">3/13午夜</h1>
+                    <h1 class="article-title-regular text-second-text-color text-4xl md:text-6xl font-bold px-2 sm:px-6 md:px-8 py-3">SQL漏洞基础</h1>
                 </div>
             
             </div>
@@ -480,15 +480,15 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2024-03-13 00:38:23</span>
-        <span class="mobile">2024-03-13 00:38:23</span>
+        <span class="desktop">2024-05-06 04:10:23</span>
+        <span class="mobile">2024-05-06 04:10:23</span>
         <span class="hover-info">创建</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-03-13 00:59:08</span>
-            <span class="mobile">2024-03-13 00:59:08</span>
+            <span class="desktop">2024-05-06 04:23:45</span>
+            <span class="mobile">2024-05-06 04:23:45</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -502,7 +502,7 @@
                     
                         
                         <li>
-                            <a href="/categories/%E6%97%A5%E8%AE%B0/">日记</a>&nbsp;
+                            <a href="/categories/Web%E5%AE%89%E5%85%A8/">Web安全</a>&nbsp;
                         </li>
                     
                     
@@ -516,7 +516,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/%E9%98%B3%E5%85%89%E6%97%A5%E8%AE%B0/">阳光日记</a>&nbsp;
+                        <a href="/tags/%E6%B3%A8%E5%85%A5%E7%B1%BB%E6%BC%8F%E6%B4%9E/">注入类漏洞</a>&nbsp;
                     </li>
                 
             </ul>
@@ -526,12 +526,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1k 字</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>84 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>3 分钟</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>1 分钟</span>
         </span>
     
     
@@ -550,32 +550,33 @@
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <h2 id="也许我应该有更好的方式去回应别人的期待"><a href="#也许我应该有更好的方式去回应别人的期待" class="headerlink" title="也许我应该有更好的方式去回应别人的期待"></a>也许我应该有更好的方式去回应别人的期待</h2><p>这个月3.10号回家，晚上和学长聊了很多，学习，工作，为人处世的关系，很多东西，我理应更感谢他，但是目前的我并拿不出什么东西。</p>
-<p>10号那天之前，我对自己很多东西都抱有期待，但是自从听说了2026年的难度之后，可能专升本这条路就不能在走了，没有想过竟然这么难，不过试一试还是要的，大不了后面去一些偏远一点的本科，但是起码他是本科学历，希望之后的专升本还是能上吧。</p>
-<p>11号也算是第一次出勤了，我知道不管怎么说，就算我没有经验，也应该是有一些进步的，不过确实，我是一直在去和学生谈的，也确实是加了有20多个学生，不过毕竟自己聊天水平摆在那里，估计后面够呛，不过确实，当天晚上就被删了几个了，不过不是问题，还是有很多留下来了。下午犯了个大错，当着别人的面问燕姐加人的事情，也怪自己的情商有问题吧，以为对面和燕姐聊的好开心就感觉没什么，这算是踩了一次坑了，不知道后面对我的评价会降低多少，也算是一次学习吧，经验不足就多学，情商不足，只能慢慢弥补了。</p>
-<p>归根结底，哪怕现在有很多的事情，但是工作肯定是第一位，我爱工作？工作爱我？这我自己都说不准，只能说干一行爱一行，既然决定干，就应该踏踏实实的去做，虽然做不好，但是量变产生质变这个道理，我觉得没问题，希望今天过后，自己的情商也可以提高一些。</p>
-<p>学长给我推了一个女生，这当然归功于我一直缠着他，也不能说缠着，只能说经常在他耳边提一嘴，没想到真的来了，那其实问题就大了，一个没有情商，没有恋爱经验，甚至零花钱都没有的人，到底应该怎么去和女生相处，更关键的是那种要天天见面的，这对我自己来说简直就是灾难啊，这东西也不是说量变产生质变的事情，虽然说次数上去了确实后面就可以更加熟练，知道怎么相处，但是这种谈恋爱这种事情，怎么能去搞数量，不能认真对待每一次的开始，抱着玩别人的态度去的话，这种事情对我可就做不出来了。找别人请教经验，只能换来一句暖男比狗不如，我承认我是个网瘾少年，也不能说多大，也算有吧，平常不打游戏就在学习，要么就晚上去跑步，我又不刷视频的，我上哪知道他们的意思去，这回是真的事到临头咯。</p>
-<p>今天也被通知了23号去考试，这个月只要拿下证书，后面的事情就可以慢慢走了，接下来就是坚持去图书馆学习自己的东西，当然我对身边的同学还是感到惋惜，明明都已经在民办了，为什么还要在去混这些时间，明明自己可以在这三年里面，在去好好规划自己，用三年时间哪怕学个技术，都可以出去不用进厂，可惜了，如果出去租房子，我就不需要在天天去图书馆了，苦兮，但是子非鳞，怎知游鳞不快乐，游鳞不自由，也许他们本身就喜欢这样，我还是慢慢自己走就行。</p>
-<p>家里面钱也不是大风刮来的，希望明天的我也可以继续保持不抽烟不喝酒，不乱花钱。</p>
-
+            <h2 id="SQL原理"><a href="#SQL原理" class="headerlink" title="SQL原理"></a>SQL原理</h2><p>在网站中输入数据库语句，语句被执行，则存在漏洞</p>
+<h2 id="语法：多为固定语句"><a href="#语法：多为固定语句" class="headerlink" title="语法：多为固定语句"></a>语法：多为固定语句</h2><p>Select_from_where	select 列 from 表名 where …</p>
+<p>Select：查询</p>
+<p>From：来自</p>
+<p>where：当…条件成立的时候语法执行</p>
+<p>例：</p>
+<p>​	?id&#x3D;-1’ union select 1,2,3 –+</p>
+<p>​	select * from user where id&#x3D;-1’ union select 1.2.3’ limt 0,1</p>
+<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2>
         </div>
 
         
             <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
                 <div class="article-copyright-info-container">
     <ul>
-        <li><strong>标题:</strong> 3/13午夜</li>
+        <li><strong>标题:</strong> SQL漏洞基础</li>
         <li><strong>作者:</strong> 莉蓓</li>
         <li><strong>创建于
-                :</strong> 2024-03-13 00:38:23</li>
+                :</strong> 2024-05-06 04:10:23</li>
         
             <li>
                 <strong>更新于
-                    :</strong> 2024-03-13 00:59:08
+                    :</strong> 2024-05-06 04:23:45
             </li>
         
         <li>
-            <strong>链接:</strong> https://xkyuanm.github.io/2024/03/13/3-13午夜/
+            <strong>链接:</strong> https://xkyuanm.github.io/2024/05/06/SQL漏洞基础/
         </li>
         <li>
             <strong>
@@ -597,7 +598,7 @@
             <ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
                 
                     <li class="tag-item mx-0.5">
-                        <a href="/tags/%E9%98%B3%E5%85%89%E6%97%A5%E8%AE%B0/">#阳光日记</a>&nbsp;
+                        <a href="/tags/%E6%B3%A8%E5%85%A5%E7%B1%BB%E6%BC%8F%E6%B4%9E/">#注入类漏洞</a>&nbsp;
                     </li>
                 
             </ul>
@@ -608,29 +609,14 @@
         
             <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
                 
-                    <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-                        <a class="prev"
-                        rel="prev"
-                        href="/2024/03/21/2024-3-21%E5%8D%8A%E5%A4%9C/"
-                        >
-                            <span class="left arrow-icon flex justify-center items-center">
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </span>
-                            <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">2024/3/21半夜</span>
-                                <span class="post-nav-item">上一篇</span>
-                            </span>
-                        </a>
-                    </div>
-                
                 
                     <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
                         <a class="next"
                         rel="next"
-                        href="/2024/03/09/%E2%80%9C3-9%E6%99%9A/"
+                        href="/2024/04/14/4-14%E5%8D%8A%E5%A4%9C/"
                         >
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">“3/9晚</span>
+                                <span class="post-nav-title-item">4/14半夜</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                             <span class="right arrow-icon flex justify-center items-center">
@@ -693,8 +679,8 @@
             <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
-        <div class="page-title">3/13午夜</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B9%9F%E8%AE%B8%E6%88%91%E5%BA%94%E8%AF%A5%E6%9C%89%E6%9B%B4%E5%A5%BD%E7%9A%84%E6%96%B9%E5%BC%8F%E5%8E%BB%E5%9B%9E%E5%BA%94%E5%88%AB%E4%BA%BA%E7%9A%84%E6%9C%9F%E5%BE%85"><span class="nav-text">也许我应该有更好的方式去回应别人的期待</span></a></li></ol>
+        <div class="page-title">SQL漏洞基础</div>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL%E5%8E%9F%E7%90%86"><span class="nav-text">SQL原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95%EF%BC%9A%E5%A4%9A%E4%B8%BA%E5%9B%BA%E5%AE%9A%E8%AF%AD%E5%8F%A5"><span class="nav-text">语法：多为固定语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E4%BB%A4"><span class="nav-text">指令</span></a></li></ol>
 
     </div>
 </div>

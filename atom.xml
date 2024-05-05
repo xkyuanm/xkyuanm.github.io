@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-04-13T18:49:39.218Z</updated>
+  <updated>2024-05-05T20:23:45.824Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SQL漏洞基础</title>
+    <link href="http://example.com/2024/05/06/SQL%E6%BC%8F%E6%B4%9E%E5%9F%BA%E7%A1%80/"/>
+    <id>http://example.com/2024/05/06/SQL%E6%BC%8F%E6%B4%9E%E5%9F%BA%E7%A1%80/</id>
+    <published>2024-05-05T20:10:23.000Z</published>
+    <updated>2024-05-05T20:23:45.824Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="SQL原理"><a href="#SQL原理" class="headerlink" title="SQL原理"></a>SQL原理</h2><p>在网站中输入数据库语句，语句被执行，则存在漏洞</p><h2 id="语法：多为固定语句"><a href="#语法：多为固定语句" class="headerlink" title="语法：多为固定语句"></a>语法：多为固定语句</h2><p>Select_from_whereselect 列 from 表名 where …</p><p>Select：查询</p><p>From：来自</p><p>where：当…条件成立的时候语法执行</p><p>例：</p><p>​?id&#x3D;-1’ union select 1,2,3 –+</p><p>​select * from user where id&#x3D;-1’ union select 1.2.3’ limt 0,1</p><h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;SQL原理&quot;&gt;&lt;a href=&quot;#SQL原理&quot; class=&quot;headerlink&quot; title=&quot;SQL原理&quot;&gt;&lt;/a&gt;SQL原理&lt;/h2&gt;&lt;p&gt;在网站中输入数据库语句，语句被执行，则存在漏洞&lt;/p&gt;
+&lt;h2 id=&quot;语法：多为固定语句&quot;&gt;&lt;a href=&quot;#语</summary>
+      
+    
+    
+    
+    <category term="Web安全" scheme="http://example.com/categories/Web%E5%AE%89%E5%85%A8/"/>
+    
+    
+    <category term="注入类漏洞" scheme="http://example.com/tags/%E6%B3%A8%E5%85%A5%E7%B1%BB%E6%BC%8F%E6%B4%9E/"/>
+    
+  </entry>
   
   <entry>
     <title>4/14半夜</title>
@@ -190,7 +215,7 @@
     <link href="http://example.com/2024/01/24/OWASP-TOP-10/"/>
     <id>http://example.com/2024/01/24/OWASP-TOP-10/</id>
     <published>2024-01-23T20:58:20.000Z</published>
-    <updated>2024-01-23T21:05:46.489Z</updated>
+    <updated>2024-04-14T07:43:54.952Z</updated>
     
     <content type="html"><![CDATA[<h2 id="什么是TOP-10"><a href="#什么是TOP-10" class="headerlink" title="什么是TOP 10"></a>什么是TOP 10</h2><p><a class="link"   href="https://owasp.org/Top10/zh_CN/" >首頁 - OWASP Top 10:2021 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><h2 id="为什么了解TOP-10"><a href="#为什么了解TOP-10" class="headerlink" title="为什么了解TOP 10"></a>为什么了解TOP 10</h2><p>TOP 10 每四年更新一次，就现在而言对于我这种初学者来说，可以作为一种指引，告诉我当下的多发漏洞，以TOP 10 作为学习的指引，知道从哪些方面学习，不至于过于迷茫。</p><h2 id="TOP-10"><a href="#TOP-10" class="headerlink" title="TOP 10"></a>TOP 10</h2><p><strong>A01:2021-权限控制失效</strong> </p><p><strong>A02:2021-加密机制失效</strong> </p><p><strong>A03:2021-注入式攻击</strong> </p><p><strong>A04:2021-不安全设计</strong> </p><p><strong>A05:2021-安全设定缺陷</strong> </p><p><strong>A06:2021-危险或过旧的组件</strong> </p><p><strong>A07:2021-认证及验证机制失效</strong> </p><p><strong>A08:2021-软件及资料完整性失效</strong> </p><p><strong>A09:2021-安全记录及监控失效</strong> </p><p><strong>A10:2021-服务器端请求伪造</strong> </p>]]></content>
     
@@ -202,6 +227,10 @@
     
     
     
+    <category term="学习" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="信息安全" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/"/>
     
   </entry>
   
